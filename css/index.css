@@ -5,6 +5,11 @@
 /*NEED 2 MIXINS*/
 /*NEED 1 PARAMETRIC MIXINS
 
+button color
+text color
+width
+
+
 AT LEAST 2 PARAMETERS
 */
 html,
@@ -97,30 +102,208 @@ video {
 }
 * {
   box-sizing: border-box;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+html {
   font-size: 62.5%;
-  margin: 0 auto;
 }
 body {
-  border: 2px solid fuchsia;
+  font-family: 'Comfortaa', cursive;
+  font-size: 2rem;
 }
 /*NAVIGATION */
-header nav {
+header {
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+@media (max-width: 500px) {
+  header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+header nav {
   justify-content: center;
   align-items: center;
   padding: 0 2%;
+  width: 100%;
+  display: flex;
+  margin-top: 5%;
+}
+@media (max-width: 500px) {
+  header nav {
+    justify-content: center;
+    align-items: center;
+  }
 }
 header nav a {
+  justify-content: center;
   padding: 2%;
   text-decoration: none;
-  color: black;
+  color: #778899;
   font-size: 2rem;
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  header nav a {
+    padding-top: 15%;
+    padding-bottom: 0;
+    color: #BC8F8F;
+  }
 }
 /*MAIN SECTION*/
-.artists-container {
+.container {
+  width: 900px;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 0;
+  margin: 0 auto;
+}
+.container .title-container {
+  width: 100%;
+  margin: 0%;
+  height: 60vh;
+}
+.container .title-container #cta {
+  background-image: url(../assets/home.png);
+  padding: 15%;
+  margin: 0 10%;
+  font-size: 3rem;
+  text-align: center;
+  max-width: 100%;
+  height: 70vh;
+}
+@media (max-width: 500px) {
+  .container .title-container #cta {
+    max-width: 100%;
+    padding: 0;
+    margin: 0 5%;
+    height: 50vh;
+  }
+}
+.container .title-container #cta .ctaDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 30vh;
+  margin: 15% auto;
+  padding: 5%;
+  text-align: center;
+}
+.container .title-container #cta .ctaDiv h1 {
+  color: white;
+}
+.container .title-container #cta .ctaDiv button {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background-color: #EE82EE;
+  margin: 0 10px 20px;
+  cursor: pointer;
+  width: 175px;
+  height: 40px;
+  font-size: 2rem;
+  border-radius: 10px;
+  color: #00FF7F;
+}
+.container .title-container #cta .ctaDiv button:hover {
+  background-color: #FF0000;
+}
+@media (max-width: 500px) {
+  .container .title-container #cta .ctaDiv button {
+    color: yellowgreen;
+    background-color: dodgerblue;
+  }
+}
+@media (max-width: 500px) {
+  .container .title-container #cta .ctaDiv {
+    padding-top: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container .artists-container {
   display: flex;
   flex-wrap: wrap;
+  border-top: 2px solid darkgrey;
+  margin: 7%;
+  justify-content: space-around;
+  max-width: 100%;
 }
-.artists-container .artist {
-  width: 40%;
+@media (max-width: 500px) {
+  .container .artists-container {
+    max-width: 100%;
+    flex-direction: column;
+    padding: 0;
+    margin: 4%;
+    border-top: 2px solid darkgrey;
+    color: steelblue;
+  }
+}
+.container .artists-container .artist {
+  width: 48%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2% auto;
+  display: flex;
+  flex-direction: column;
+}
+.container .artists-container .artist img {
+  border-radius: 15%;
+  width: 100%;
+  height: 300px;
+  padding: 9%;
+}
+.container .artists-container .artist a {
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  .container .artists-container .artist {
+    width: 100%;
+    padding: 0 20%;
+    margin: 0;
+  }
+}
+.container .artists-container .artist .bio {
+  justify-content: center;
+  padding: 8% 15%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex: 1;
+}
+@media (max-width: 500px) {
+  .container .artists-container .artist .bio {
+    padding: 10%;
+    margin: 8% 0;
+  }
+}
+.container footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  .container footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

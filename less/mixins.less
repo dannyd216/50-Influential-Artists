@@ -1,13 +1,13 @@
 /*MIXINS HERE*/
 
-.border() {
+.color() {
 
-    border: 2px solid fuchsia;
+    color: steelblue;
 }
 
 /*NEED 2 MIXINS*/
 
-.flexItCenter() {
+.flexIt() {
 
     display: flex;
 
@@ -17,18 +17,52 @@
 }
 
 
-
-
-
-
-
-
-
 /*NEED 1 PARAMETRIC MIXINS
 
 button color
 text color
 width
 
+
 AT LEAST 2 PARAMETERS
 */
+
+.btn(@bgColor, @btnFontColor, @newBgColor) {
+
+    display: block;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background-color: @bgColor;
+
+    margin: 0 10px 20px;
+
+    cursor: pointer;
+
+    width: 175px;
+
+    height: 40px;
+
+    font-size: 2rem;
+
+    border-radius: 10px;
+
+    color: @btnFontColor;
+
+    &:hover {
+
+        background-color: @newBgColor ;
+
+    }
+
+    @media @phone {
+
+        color: yellowgreen;
+
+        background-color: dodgerblue;
+    }
+
+
+}

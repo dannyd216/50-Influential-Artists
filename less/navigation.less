@@ -2,23 +2,92 @@
 
 header {
 
+    width: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin: 0;
+
+    padding: 0;
+
+    height: 80vh;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    position: relative;
+
+
+
+    @media @phone {
+
+        width: 100%;
+
+        margin: 0 auto;
+
+        padding: 0;
+
+    }
+
     nav {
         .flexIt();
 
+        justify-content: center;
+
+        align-items: center;
+
         padding: 0 2%;
 
+        width: 100%;
+
+        display: flex;
+
+        margin-top: 5%;
+
+        @media @phone {
+
+            // border: 2px solid black;
+
+            justify-content: center;
+
+            align-items: center;
+
+        }
+
         a {
+
+            justify-content: center;
 
             padding: 2%;
 
             text-decoration: none;
 
-            color: black;
+            color: @fontMain;
 
             font-size: 2rem;
 
+            font-weight: bold;
+
+            @media @phone {
+
+                padding-top: 15%;
+
+                padding-bottom: 0;
+
+                color: @fontHeading;
+
+
+            }
+
         }
 
-        
+
     }
 }
