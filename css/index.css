@@ -98,8 +98,29 @@ video {
 * {
   box-sizing: border-box;
   font-size: 62.5%;
+  margin: 0 auto;
 }
 body {
   border: 2px solid fuchsia;
 }
 /*NAVIGATION */
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2%;
+}
+header nav a {
+  padding: 2%;
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+/*MAIN SECTION*/
+.artists-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.artists-container .artist {
+  width: 40%;
+}
