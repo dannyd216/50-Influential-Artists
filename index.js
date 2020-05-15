@@ -269,18 +269,38 @@ console.log(getArtistByIndex(artists, 0));
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
+function removeArtist(arr, num) {
   /* code here */
+
+  // SPLICE STARTS AT SAID INDEX, AND GOES HOW MANY INDEXES -- CAN ADD OR DEL
+  // arr.splice(num, 1);
+
+  //  DELETE LEAVES HOLE IN THE ARRAY SO PLACES DO NOT MIX
+  // NOT CLEAR ON WHICH TO USE GIVEN THE DIRECTIONS AT THE END SAYS I AM 21 IN THE ARRAY????????
+  delete arr[num];
+
+  return arr;
 }
+
+console.log(removeArtist(artists, 0));
 
 /**
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */) {
+console.log(artists);
+
+function lotsOfArt(arr) {
   /* Code here */
+
+  // create var to hold new array, filter through the given arr, the process/funct of going thru the given arr is called p and we are looking for p.paintings that are 100+
+  const bigPics = arr.filter((p) => p.paintings >= 100);
+
+  return bigPics;
 }
+
+console.log(lotsOfArt(artists));
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
 
@@ -291,9 +311,25 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */) {
+function addArtist(arr) {
   /* Code here */
+
+  const newArtist = {
+    id: 21,
+    name: "Danni",
+    years: "1985 - current day",
+    genre: "Web Design",
+    nationality: "Other",
+    bio:
+      "Lorenm sldjdo aldfdsfh aslkdfhd faldfnsdlofh lksdfsdofh adkfnsldofha d fhsdhfg sakldfsdalkjghaslk sdhslka lsakjfhlsakgls vlksdjv skjaslk",
+  };
+
+  arr.push(newArtist);
+
+  return arr;
 }
+
+console.log(addArtist(artists));
 
 // 🎨🎨 STRETCH 🎨🎨//
 
